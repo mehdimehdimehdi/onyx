@@ -5,6 +5,7 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 use FOS\RestBundle\FOSRestBundle;
 use JMS\SerializerBundle\JMSSerializerBundle;
 use Nelmio\ApiDocBundle\NelmioApiDocBundle;
+use FOS\UserBundle\FOSUserBundle;
 
 class AppKernel extends Kernel
 {
@@ -22,6 +23,7 @@ class AppKernel extends Kernel
             new onyx\HomeBundle\onyxHomeBundle(),
         	new JMSSerializerBundle(),
         	new NelmioApiDocBundle(),
+        	new	FOSUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

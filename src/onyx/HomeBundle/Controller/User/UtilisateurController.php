@@ -9,11 +9,11 @@ use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\Controller\Annotations\Get;
 use FOS\RestBundle\Controller\Annotations\View;
 use FOS\RestBundle\Controller\Annotations\Post;
-use onyx\HomeBundle\Form\Type\UserType;
 use FOS\RestBundle\Controller\Annotations\Delete;
 use FOS\RestBundle\Controller\Annotations\Patch;
+use onyx\HomeBundle\Form\Type\UtilisateurType;
 
-class UserController extends Controller
+class UtilisateurController extends Controller
 {
 	
     /**
@@ -53,7 +53,7 @@ class UserController extends Controller
     public function postUsersAction(Request $request)
     {
     	$user = new Utilisateur();
-    	$form = $this->createForm(UserType::class, $user);
+    	$form = $this->createForm(UtilisateurType::class, $user);
     	
     	$form->submit($request->request->all());
     	
@@ -103,7 +103,7 @@ class UserController extends Controller
     		return new JsonResponse(['message' => 'User not found'], Response::HTTP_NOT_FOUND);
     	}
     	
-    	$form = $this->createForm(UserType::class, $user);
+    	$form = $this->createForm(UtilisateurType::class, $user);
     	
     	$form->submit($request->request->all(), $clearMissing);
     	

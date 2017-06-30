@@ -3,6 +3,7 @@ namespace onyx\HomeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use FOS\UserBundle\Model\User;
 
 /**
  * @author onyx-dev
@@ -10,7 +11,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Table(name="utilisateur")
  */
 
-class Utilisateur
+class Utilisateur extends User
 {
    /**
      * @ORM\Id
@@ -63,6 +64,7 @@ class Utilisateur
     public function __construct()
     {
     	$this->projects = new ArrayCollection();
+    	parent::__construct();
     }
 
     /**
