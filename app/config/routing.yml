@@ -1,0 +1,12 @@
+onyx_home:
+    resource: "@onyxHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+users:
+    resource: "@onyxHomeBundle/Controller"
+    type:     annotation
+    prefix:   /
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /our-api/doc

@@ -1,0 +1,3 @@
+#onyx_home_homepage:
+#    path:     /
+#    defaults: { _controller: 'onyxHomeBundle:Home:index' }

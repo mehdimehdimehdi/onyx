@@ -1,0 +1,10 @@
+onyx\HomeBundle\Entity\EtatsProject:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: ['userIDProjet', 'allEtatsProjects','etatsProjectsIDProjects' ,'allProjects']
+        description:
+            groups: ['userIDProjet', 'allEtatsProjects','etatsProjectsIDProjects' ,'allProjects']
+        projects:
+            groups: ['allEtatsProjects' , 'etatsProjectsIDProjects']
+        

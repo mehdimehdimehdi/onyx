@@ -1,0 +1,14 @@
+onyx\HomeBundle\Entity\Tache:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: []
+        description:
+            groups: []
+        heures:
+            groups: []
+        minutes:
+            groups: []
+        date:
+            groups: []
+        

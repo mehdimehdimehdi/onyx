@@ -1,0 +1,16 @@
+onyx\HomeBundle\Entity\Utilisateur:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: ['userIDProjet', 'allUser' , 'UserID']
+        nom:
+            groups: ['userIDProjet', 'allUser' , 'UserID']
+        prenom:
+            groups: ['userIDProjet', 'allUser' , 'UserID']
+        tel:
+            groups: ['UserID']
+        mail:
+            groups: ['UserID']
+        projects:
+            groups: ['']
+        

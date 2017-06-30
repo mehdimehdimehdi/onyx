@@ -1,0 +1,14 @@
+onyx\HomeBundle\Entity\Projet:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: ['allEtatsProjects', 'etatsProjectsIDProjects', 'userIDProjet', 'allProjects' , 'projectID' ,'ProjectIDDocuments']
+        description:
+            groups: ['allEtatsProjects', 'etatsProjectsIDProjects',  'userIDProjet' ,'allProjects' , 'projectID','ProjectIDDocuments']
+        hvendues:
+            groups: ['allEtatsProjects', 'etatsProjectsIDProjects',  'userIDProjet' ,'allProjects' , 'projectID','ProjectIDDocuments']
+        users:
+            groups: ['projet' ,'allProjects']
+        etatprojet:
+            groups: ['userIDProjet' ,'allProjects']
+        

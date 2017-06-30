@@ -1,0 +1,10 @@
+onyx\HomeBundle\Entity\TypeMecano:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: []
+        description:
+            groups: []
+        mecanos:
+            groups: []
+        

@@ -1,0 +1,11 @@
+onyx\HomeBundle\Entity\Piece:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: []
+        description:
+            groups: []
+        achat:
+            groups: []
+        vente:
+            groups: []

@@ -1,0 +1,14 @@
+onyx\HomeBundle\Entity\Mecano:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: []
+        nom:
+            groups: []
+        prenom:
+            groups: []
+        mail:
+            groups: []
+        tel:
+            groups: []
+        

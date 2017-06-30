@@ -1,0 +1,7 @@
+onyx\HomeBundle\Entity\Chantier:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: []
+        description:
+            groups: []

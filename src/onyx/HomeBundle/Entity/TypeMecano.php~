@@ -1,0 +1,36 @@
+<?php
+
+namespace onyx\HomeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ *
+ * @author onyx-dev
+ * @ORM\Entity()
+ * @ORM\Table(name="typemecanos")
+ */
+
+class TypeMecano {
+	
+	/**
+	 * @ORM\Id()
+	 * @ORM\Column(type="integer")
+	 * @ORM\GeneratedValue()
+	 */
+	protected $id;
+	
+	/**
+	 * @ORM\Column(type="string")
+	 */
+	protected $description;
+	
+	/**
+	 * @ORM\OneToMany(targetEntity="Mecano", mappedBy="typemecano") 
+	 * @var Mecano[]
+	 */
+	protected $mecnao;
+
+    
+}

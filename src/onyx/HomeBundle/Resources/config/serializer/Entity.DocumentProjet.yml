@@ -1,0 +1,11 @@
+onyx\HomeBundle\Entity\DocumentProjet:
+    exclusion_policy: none
+    properties:
+        id:
+            groups: ['allDocuments' , 'ProjectIDDocuments']
+        description:
+            groups: ['allDocuments' , 'ProjectIDDocuments']
+        path:
+            groups: ['allDocuments' ,'ProjectIDDocuments']
+        projet:
+            groups: ['ProjectIDDocuments']
