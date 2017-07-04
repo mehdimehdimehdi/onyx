@@ -3,7 +3,8 @@ namespace onyx\HomeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use FOS\UserBundle\Model\User;
+use FOS\UserBundle\Model\User as BaseUser;
+
 
 /**
  * @author onyx-dev
@@ -11,7 +12,7 @@ use FOS\UserBundle\Model\User;
  * @ORM\Table(name="utilisateur")
  */
 
-class Utilisateur extends User
+class Utilisateur extends BaseUser
 {
    /**
      * @ORM\Id
@@ -35,26 +36,7 @@ class Utilisateur extends User
      */
     protected $tel;
     
-    /**
-     * @ORM\Column(type="string")
-     */
-    protected $mail;
-    
-    /**
-     * @ORM\Column(type="string")
-     */
-    protected $mdp;
-    
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    protected  $actif;
-    
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    protected $admin;
-   
+      
     /**
      * @ORM\OneToMany(targetEntity="Projet", mappedBy="user")
      * @var Projet[]
@@ -63,8 +45,9 @@ class Utilisateur extends User
     
     public function __construct()
     {
-    	$this->projects = new ArrayCollection();
     	parent::__construct();
+    	
+    	$this->projects = new ArrayCollection();
     }
 
     /**
@@ -149,102 +132,7 @@ class Utilisateur extends User
         return $this->tel;
     }
 
-    /**
-     * Set mail
-     *
-     * @param string $mail
-     *
-     * @return Utilisateur
-     */
-    public function setMail($mail)
-    {
-        $this->mail = $mail;
-
-        return $this;
-    }
-
-    /**
-     * Get mail
-     *
-     * @return string
-     */
-    public function getMail()
-    {
-        return $this->mail;
-    }
-
-    /**
-     * Set mdp
-     *
-     * @param string $mdp
-     *
-     * @return Utilisateur
-     */
-    public function setMdp($mdp)
-    {
-        $this->mdp = $mdp;
-
-        return $this;
-    }
-
-    /**
-     * Get mdp
-     *
-     * @return string
-     */
-    public function getMdp()
-    {
-        return $this->mdp;
-    }
-
-    /**
-     * Set actif
-     *
-     * @param boolean $actif
-     *
-     * @return Utilisateur
-     */
-    public function setActif($actif)
-    {
-        $this->actif = $actif;
-
-        return $this;
-    }
-
-    /**
-     * Get actif
-     *
-     * @return boolean
-     */
-    public function getActif()
-    {
-        return $this->actif;
-    }
-
-    /**
-     * Set admin
-     *
-     * @param boolean $admin
-     *
-     * @return Utilisateur
-     */
-    public function setAdmin($admin)
-    {
-        $this->admin = $admin;
-
-        return $this;
-    }
-
-    /**
-     * Get admin
-     *
-     * @return boolean
-     */
-    public function getAdmin()
-    {
-        return $this->admin;
-    }
-
+    
     /**
      * Add projects
      *

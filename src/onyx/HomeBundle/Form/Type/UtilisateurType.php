@@ -11,11 +11,7 @@ class UtilisateurType extends AbstractType
     {
         $builder->add('nom');
         $builder->add('prenom');
-        $builder->add('mail');
         $builder->add('tel');
-        $builder->add('mdp');
-        $builder->add('actif');
-        $builder->add('admin');
     }
 
     public function configureOptions(OptionsResolver $resolver)
